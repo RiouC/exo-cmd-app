@@ -1,5 +1,11 @@
 const readlineSync = require('readline-sync');
 
+
+if (process.argv.length != 3) {
+  console.log(`usage: node interMajoritytest.js age`)
+  process.exit(1) // exit the program with code status 1
+}
+
 // Verifier que ageMajorite peut être converti en nombre
 if (isNaN(process.argv[2])) {
     console.log(`Error: ${process.argv[2]} is not a number.`)
