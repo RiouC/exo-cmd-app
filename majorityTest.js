@@ -12,6 +12,15 @@ if (isNaN(age)) {
 
 age = Number(age);
 
+if (name.length < 1) {
+    console.log(`Error: name bad length.`)
+    process.exit(1)
+}
+if (firstName.length < 1) {
+    console.log(`Error: firstName bad length.`)
+    process.exit(1)
+}
+
 if (age < 18)
     console.log(`Désolé, ${firstName} ${name}, vous êtes mineur, vous ne pouvez pas voter`);
 else
