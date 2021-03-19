@@ -1,7 +1,7 @@
 
 const argvLength = process.argv.length;
 // check argv length
-if (argvLength < 4 && argvLength > 5) {
+if (argvLength < 4 || argvLength > 5) {
     console.log(`usage: node pyramid.js nbBase symbol [-r]`);
     process.exit(1) // exit the program with code status 1
 }
