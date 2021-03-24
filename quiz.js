@@ -18,9 +18,9 @@ let goodAnswers = 0;
 let choix = ['Vrai', 'Faux'];
 
 
-for (let i = 0; i < quizz.length; i++){
-    let index = readlineSync.keyInSelect(choix, quizz[i][0]);
-    if (choix[index] == quizz[i][1]) {
+for ([question, answer] of quizz){
+    let index = readlineSync.keyInSelect(choix, question);
+    if (choix[index] == answer) {
 	goodAnswers++;
     }
 }
